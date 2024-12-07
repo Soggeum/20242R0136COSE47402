@@ -58,7 +58,7 @@ class neural_network(nn.Module):
                 self.network_layers.append( nn.Dropout(p=p_dropout) )
             #
             if i < n_layers - 2:
-                self.network_layers.append( nn.ReLU() )
+                self.network_layers.append( nn.GELU() )
         #
         self.network_layers = nn.Sequential(*self.network_layers)
         #
